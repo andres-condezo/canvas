@@ -3,17 +3,28 @@ var lienzo = d.getContext("2d");
 var lineas = 30;
 var l = 0;
 var yi, xf;
+var color2 ="#FAA";
 
-while(l < lineas)
+for(l = 0; l < lineas; l++)
 {
   yi = 10 * l;
   xf = 10 * (l + 1);
-  dibujarLinea("#AAF", 0, yi, xf, 300);
+  dibujarLinea(color2, 0, yi, xf, 300);
   console.log("Linea " +l)
-  l = l + 1;
 }
 
+for(l = 0; l < lineas; l++)
+{
+  yi = 10 * l;
+  xf = 10 * (l + 1);
+  dibujarLinea(color2, yi, 0, 300, xf);
+  console.log("Linea " +l)
+}
 
+dibujarLinea(color2, 1, 1, 299, 1);
+dibujarLinea(color2, 299, 1, 299, 299);
+dibujarLinea(color2, 1, 1, 1, 299);
+dibujarLinea(color2, 1, 299, 299, 299);
 
 function dibujarLinea(color, xin, yin, xfi, yfi)
 {
