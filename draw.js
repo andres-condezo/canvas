@@ -1,3 +1,8 @@
+var text = document.getElementById("texto_lineas");
+var boton = document.getElementById("bttn_enviar");
+
+boton.addEventListener("click", drawperclick);
+
 var d = document.getElementById("draw");
 var lienzo = d.getContext("2d");
 var lineas = 30;
@@ -25,5 +30,9 @@ function dibujarLinea(color, xin, yin, xfi, yfi) {
   lienzo.lineTo(xfi, yfi);
   lienzo.stroke();
   lienzo.closePath();
+}
+
+function drawperclick() {
+  alert("No me toques ahi" + text.value);
 }
 
