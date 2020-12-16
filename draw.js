@@ -28,8 +28,8 @@ function drawperclick() {
   for (l = 0; l < lineas; l++) {
     yi = espacio * l;
     xf = espacio * (l + 1);
-    dibujarLinea(color2, yi, 0, 300, xf);
-    dibujarLinea(color2, 0, yi, xf, 300);
+    dibujarLinea(color2, 0, yi, xf, ancho);
+    dibujarLinea(color2, yi, 0, ancho, xf);
     console.log("Linea " + l);
   }
 
